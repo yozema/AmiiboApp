@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AmiiboViewController: UIViewController {
+final class AmiiboViewController: UIViewController {
     
     private let amiibosURL = "https://amiiboapi.com/api/amiibo"
 
