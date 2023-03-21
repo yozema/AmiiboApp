@@ -13,6 +13,7 @@
 		9C416BEC29C95060004ACE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEA29C95060004ACE29 /* Main.storyboard */; };
 		9C416BEE29C95062004ACE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BED29C95062004ACE29 /* Assets.xcassets */; };
 		9C416BF129C95062004ACE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */; };
+		9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BFF29C950EC004ACE29 /* Amiibo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9C416BED29C95062004ACE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C416BF029C95062004ACE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C416BF229C95062004ACE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C416BFF29C950EC004ACE29 /* Amiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amiibo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,56 @@
 		9C416BE329C95060004ACE29 /* AmiiboApp */ = {
 			isa = PBXGroup;
 			children = (
-				9C416BE429C95060004ACE29 /* AppDelegate.swift */,
-				9C416BE629C95060004ACE29 /* SceneDelegate.swift */,
-				9C416BE829C95060004ACE29 /* ViewController.swift */,
-				9C416BEA29C95060004ACE29 /* Main.storyboard */,
-				9C416BED29C95062004ACE29 /* Assets.xcassets */,
-				9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */,
-				9C416BF229C95062004ACE29 /* Info.plist */,
+				9C416BFB29C950A1004ACE29 /* ViewControllers */,
+				9C416BFC29C950B2004ACE29 /* Models */,
+				9C416BF929C9507F004ACE29 /* Storyboards */,
+				9C416BF829C95074004ACE29 /* App */,
+				9C416BFA29C95091004ACE29 /* Resources */,
 			);
 			path = AmiiboApp;
+			sourceTree = "<group>";
+		};
+		9C416BF829C95074004ACE29 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C416BE429C95060004ACE29 /* AppDelegate.swift */,
+				9C416BE629C95060004ACE29 /* SceneDelegate.swift */,
+				9C416BF229C95062004ACE29 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C416BF929C9507F004ACE29 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9C416BEA29C95060004ACE29 /* Main.storyboard */,
+				9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		9C416BFA29C95091004ACE29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C416BED29C95062004ACE29 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9C416BFB29C950A1004ACE29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C416BE829C95060004ACE29 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C416BFC29C950B2004ACE29 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C416BFF29C950EC004ACE29 /* Amiibo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */,
 				9C416BE929C95060004ACE29 /* ViewController.swift in Sources */,
 				9C416BE529C95060004ACE29 /* AppDelegate.swift in Sources */,
 				9C416BE729C95060004ACE29 /* SceneDelegate.swift in Sources */,
@@ -289,12 +333,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G2WMS5YDNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AmiiboApp/Info.plist;
+				INFOPLIST_FILE = AmiiboApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +347,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iz.AmiiboApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +365,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G2WMS5YDNN;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AmiiboApp/Info.plist;
+				INFOPLIST_FILE = AmiiboApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +379,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = iz.AmiiboApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
