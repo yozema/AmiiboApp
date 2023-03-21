@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C416BE529C95060004ACE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BE429C95060004ACE29 /* AppDelegate.swift */; };
 		9C416BE729C95060004ACE29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BE629C95060004ACE29 /* SceneDelegate.swift */; };
-		9C416BE929C95060004ACE29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BE829C95060004ACE29 /* ViewController.swift */; };
+		9C416BE929C95060004ACE29 /* AmiiboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BE829C95060004ACE29 /* AmiiboViewController.swift */; };
 		9C416BEC29C95060004ACE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEA29C95060004ACE29 /* Main.storyboard */; };
 		9C416BEE29C95062004ACE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BED29C95062004ACE29 /* Assets.xcassets */; };
 		9C416BF129C95062004ACE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		9C416BE129C95060004ACE29 /* AmiiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C416BE429C95060004ACE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C416BE629C95060004ACE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C416BE829C95060004ACE29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C416BE829C95060004ACE29 /* AmiiboViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboViewController.swift; sourceTree = "<group>"; };
 		9C416BEB29C95060004ACE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C416BED29C95062004ACE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C416BF029C95062004ACE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		9C416BFB29C950A1004ACE29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C416BE829C95060004ACE29 /* ViewController.swift */,
+				9C416BE829C95060004ACE29 /* AmiiboViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */,
-				9C416BE929C95060004ACE29 /* ViewController.swift in Sources */,
+				9C416BE929C95060004ACE29 /* AmiiboViewController.swift in Sources */,
 				9C416BE529C95060004ACE29 /* AppDelegate.swift in Sources */,
 				9C416BE729C95060004ACE29 /* SceneDelegate.swift in Sources */,
 			);
