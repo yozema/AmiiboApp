@@ -8,6 +8,7 @@
 import Foundation
 
 final class FetchAmiibo {
+    
     static let shared = FetchAmiibo()
     
     private let amiibosURL = "https://amiiboapi.com/api/amiibo/?showusage"
