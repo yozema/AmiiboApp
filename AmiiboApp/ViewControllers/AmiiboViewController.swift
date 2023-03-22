@@ -9,7 +9,7 @@ import UIKit
 
 final class AmiiboViewController: UIViewController {
     
-    private let amiibosURL = "https://amiiboapi.com/api/amiibo"
+    private let amiibosURL = "https://amiiboapi.com/api/amiibo/?showusage"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,10 @@ final class AmiiboViewController: UIViewController {
             let decoder = JSONDecoder()
             
             do {
-                let amiiboList = try decoder.decode(AmiiboList.self, from: data)
+                let amiiboList = try decoder.decode(Amiibo.self, from: data)
                 print(amiiboList.amiibo)
             } catch let error {
-                print(error.localizedDescription)
+                print(error)
             }
         }.resume()
     }

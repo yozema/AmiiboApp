@@ -13,7 +13,7 @@
 		9C416BEC29C95060004ACE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEA29C95060004ACE29 /* Main.storyboard */; };
 		9C416BEE29C95062004ACE29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BED29C95062004ACE29 /* Assets.xcassets */; };
 		9C416BF129C95062004ACE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */; };
-		9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BFF29C950EC004ACE29 /* Amiibo.swift */; };
+		9C416C0029C950EC004ACE29 /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BFF29C950EC004ACE29 /* Description.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		9C416BED29C95062004ACE29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C416BF029C95062004ACE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C416BF229C95062004ACE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C416BFF29C950EC004ACE29 /* Amiibo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amiibo.swift; sourceTree = "<group>"; };
+		9C416BFF29C950EC004ACE29 /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		9C416BFC29C950B2004ACE29 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9C416BFF29C950EC004ACE29 /* Amiibo.swift */,
+				9C416BFF29C950EC004ACE29 /* Description.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */,
+				9C416C0029C950EC004ACE29 /* Description.swift in Sources */,
 				9C416BE929C95060004ACE29 /* AmiiboViewController.swift in Sources */,
 				9C416BE529C95060004ACE29 /* AppDelegate.swift in Sources */,
 				9C416BE729C95060004ACE29 /* SceneDelegate.swift in Sources */,
