@@ -11,7 +11,7 @@ final class AmiiboViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FetchAmiibo.shared.fetchAmiibo()
+        AmiiboAPI.shared.fetchAmiibo()
     }
 }
 
