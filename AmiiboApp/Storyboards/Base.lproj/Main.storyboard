@@ -10,92 +10,97 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Amiibo View Controller-->
         <scene sceneID="fee-DF-fAQ">
             <objects>
-                <collectionViewController id="VC1-5Q-8If" sceneMemberID="viewController">
+                <collectionViewController id="VC1-5Q-8If" customClass="AmiiboViewController" customModule="AmiiboApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="7ny-l3-2Fj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jSH-bR-PCt">
-                            <size key="itemSize" width="128" height="128"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="25" id="jSH-bR-PCt">
+                            <size key="itemSize" width="310" height="140"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="40" maxX="0.0" maxY="40"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="amiiboCell" id="Dpy-N7-38i">
-                                <rect key="frame" x="20" y="0.0" width="280" height="100"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="amiiboCell" id="Dpy-N7-38i" customClass="AmiiboCell" customModule="AmiiboApp" customModuleProvider="target">
+                                <rect key="frame" x="5" y="40" width="310" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nwU-G1-4ex">
-                                    <rect key="frame" x="0.0" y="0.0" width="280" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="310" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBB-nU-PRL">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                                            <rect key="frame" x="5" y="5" width="100" height="130"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="80" id="ms7-oh-vym"/>
+                                                <constraint firstAttribute="width" constant="100" id="ms7-oh-vym"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2fX-FJ-P53">
-                                            <rect key="frame" x="88" y="8" width="142" height="84"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4o-Hz-q8n">
+                                            <rect key="frame" x="113" y="8" width="189" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-qO-Lb7">
+                                            <rect key="frame" x="113" y="40" width="189" height="20.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4o-Hz-q8n">
-                                                    <rect key="frame" x="0.0" y="0.0" width="55" height="27"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jj8-pa-WVn">
+                                                    <rect key="frame" x="0.0" y="1" width="22" height="18"/>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameSeries" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-V2-8kd">
+                                                    <rect key="frame" x="43" y="0.0" width="146" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y6i-Zw-JoC">
-                                                    <rect key="frame" x="0.0" y="35" width="142" height="49"/>
-                                                    <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="dbw-ud-928">
-                                                            <rect key="frame" x="0.0" y="0.0" width="28" height="49"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gamecontroller.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jj8-pa-WVn">
-                                                                    <rect key="frame" x="0.0" y="1" width="28" height="22"/>
-                                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </imageView>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PYu-EP-4GW">
-                                                                    <rect key="frame" x="0.0" y="26" width="28" height="21.5"/>
-                                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </imageView>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NcG-7r-qpD">
-                                                            <rect key="frame" x="36" y="0.0" width="106" height="49"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gameSeries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-V2-8kd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amiiboSeries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW4-TQ-mWy">
-                                                                    <rect key="frame" x="0.0" y="28.5" width="106" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Z2U-rA-3cd">
+                                            <rect key="frame" x="113" y="68.5" width="189" height="20.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PYu-EP-4GW">
+                                                    <rect key="frame" x="0.0" y="1.5" width="21.5" height="17.5"/>
+                                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="amiiboSeries" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yW4-TQ-mWy">
+                                                    <rect key="frame" x="42.5" y="0.0" width="146.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="sBB-nU-PRL" secondAttribute="bottom" id="075-zp-VYV"/>
-                                        <constraint firstAttribute="bottom" secondItem="2fX-FJ-P53" secondAttribute="bottom" constant="8" id="CPV-v0-Zyh"/>
-                                        <constraint firstItem="sBB-nU-PRL" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" id="QBi-FM-HaG"/>
-                                        <constraint firstItem="2fX-FJ-P53" firstAttribute="leading" secondItem="sBB-nU-PRL" secondAttribute="trailing" constant="8" id="Tg0-Ou-hHP"/>
-                                        <constraint firstItem="sBB-nU-PRL" firstAttribute="leading" secondItem="nwU-G1-4ex" secondAttribute="leading" id="YAy-Ob-Ll7"/>
-                                        <constraint firstItem="2fX-FJ-P53" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" constant="8" id="cdF-5h-aa7"/>
+                                        <constraint firstAttribute="bottom" secondItem="sBB-nU-PRL" secondAttribute="bottom" constant="5" id="075-zp-VYV"/>
+                                        <constraint firstAttribute="trailing" secondItem="U3b-qO-Lb7" secondAttribute="trailing" constant="8" id="0hF-hk-0Xg"/>
+                                        <constraint firstAttribute="trailing" secondItem="j4o-Hz-q8n" secondAttribute="trailing" constant="8" id="Dcb-et-3Ul"/>
+                                        <constraint firstItem="U3b-qO-Lb7" firstAttribute="top" secondItem="j4o-Hz-q8n" secondAttribute="bottom" constant="8" id="J5u-1Y-Nqn"/>
+                                        <constraint firstItem="sBB-nU-PRL" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" constant="5" id="QBi-FM-HaG"/>
+                                        <constraint firstItem="j4o-Hz-q8n" firstAttribute="leading" secondItem="sBB-nU-PRL" secondAttribute="trailing" constant="8" id="TG2-Bx-uB7"/>
+                                        <constraint firstItem="sBB-nU-PRL" firstAttribute="leading" secondItem="nwU-G1-4ex" secondAttribute="leading" constant="5" id="YAy-Ob-Ll7"/>
+                                        <constraint firstItem="U3b-qO-Lb7" firstAttribute="leading" secondItem="sBB-nU-PRL" secondAttribute="trailing" constant="8" id="apg-Ns-2Se"/>
+                                        <constraint firstItem="j4o-Hz-q8n" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" constant="8" id="jWd-rf-Um9"/>
+                                        <constraint firstAttribute="trailing" secondItem="Z2U-rA-3cd" secondAttribute="trailing" constant="8" id="mY0-vv-KYT"/>
+                                        <constraint firstItem="Z2U-rA-3cd" firstAttribute="leading" secondItem="sBB-nU-PRL" secondAttribute="trailing" constant="8" id="qLS-Uf-6Lm"/>
+                                        <constraint firstItem="Z2U-rA-3cd" firstAttribute="top" secondItem="U3b-qO-Lb7" secondAttribute="bottom" constant="8" id="x2g-l0-OoS"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="280" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="amiiboImage" destination="sBB-nU-PRL" id="j3A-YS-xOo"/>
+                                    <outlet property="gameLabel" destination="JWx-V2-8kd" id="ylE-LE-M55"/>
+                                    <outlet property="nameLabel" destination="j4o-Hz-q8n" id="vl5-av-xth"/>
+                                    <outlet property="seriesLabel" destination="yW4-TQ-mWy" id="bhi-EA-qrV"/>
                                     <segue destination="lK5-kZ-jZ4" kind="show" id="3ln-K6-gbX"/>
                                 </connections>
                             </collectionViewCell>
@@ -120,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZVC-3j-Ikc">
-                                <rect key="frame" x="95" y="60" width="130" height="150"/>
+                                <rect key="frame" x="95" y="108.5" width="130" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="xA6-qf-Mm2"/>
                                 </constraints>
@@ -231,9 +236,17 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zLJ-Gv-cPe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gT1-pN-JPO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gT1-pN-JPO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="barTintColor" systemColor="systemRedColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -254,6 +267,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
