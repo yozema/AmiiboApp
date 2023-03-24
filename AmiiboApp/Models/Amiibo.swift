@@ -12,16 +12,40 @@ struct Amiibo: Decodable {
 }
 
 struct Description: Decodable {
+    let amiiboSeries: String
+    let gameSeries: String
     let image: URL
     let name: String
+    let character: String
     let release: Release?
-    let gamesSwitch: [Switch]
+    let gamesSwitch: [Console]
+    let games3DS: [Console]
+    let gamesWiiU: [Console]
+    let type: String
+    let head: String
+    let tail: String
+    
+    var identifier: String{
+        "\(head)\(tail)"
+    }
 }
 
 struct Release: Decodable {
+    let au: String?
+    let jp: String?
     let eu: String?
+    let na: String?
 }
 
-struct Switch: Decodable {
+struct Console: Decodable {
     let gameName: String
+    let amiiboUsage: [Usage]
+}
+
+struct Usage: Decodable {
+    let usage: String
+    
+    enum CodingKeys: String, CodingKey {
+        case usage = "Usage"
+    }
 }
