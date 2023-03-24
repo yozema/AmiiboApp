@@ -7,8 +7,8 @@
 
 import Foundation
 
-final class AmiiboAPI {
-    static let shared = AmiiboAPI()
+final class NetworkManager {
+    static let shared = NetworkManager()
     
     private let amiibosURL = "https://amiiboapi.com/api/amiibo/?showusage"
     
