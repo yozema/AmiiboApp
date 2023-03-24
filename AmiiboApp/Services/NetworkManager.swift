@@ -7,16 +7,31 @@
 
 import Foundation
 
+enum Link {
+    case amiibosURL
+    
+    var url: URL {
+        switch self {
+        case .amiibosURL:
+            return URL(string: "https://amiiboapi.com/api/amiibo/?showusage")!
+        }
+    }
+}
+
+enum NetworkError: Error {
+    case noData
+    case decodingError
+}
+
 final class NetworkManager {
     static let shared = NetworkManager()
     
-    private let amiibosURL = "https://amiiboapi.com/api/amiibo/?showusage"
+    private init(){}
     
-    func fetchAmiibo() {
-        guard let url = URL(string: amiibosURL) else { return }
-        
+    func fetch<T: Decodable>(_ type: T.Type, from url: URL, completion: @escaping(Result<T, NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
+                completion(.failure(.noData))
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
@@ -24,12 +39,25 @@ final class NetworkManager {
             let decoder = JSONDecoder()
             
             do {
-                let amiiboList = try decoder.decode(Amiibo.self, from: data)
-                print(amiiboList.amiibo)
-            } catch let error {
-                print(error)
+                let dataModel = try decoder.decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(dataModel))
+                }
+            } catch {
+                completion(.failure(.decodingError))
             }
         }.resume()
     }
-    private init(){}
+    
+    func fetchImage(from url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
+                return
+            }
+            DispatchQueue.main.async {
+                completion(.success(imageData))
+            }
+        }
+    }
 }
