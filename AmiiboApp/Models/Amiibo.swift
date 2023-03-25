@@ -17,10 +17,9 @@ struct Description: Decodable {
     let image: URL
     let name: String
     let character: String
-    let release: Release?
     let gamesSwitch: [Console]
-    let games3DS: [Console]
     let gamesWiiU: [Console]
+    let games3DS: [Console]
     let type: String
     let head: String
     let tail: String
@@ -32,27 +31,16 @@ struct Description: Decodable {
         Amiibo Series: \(amiiboSeries)
         Type: \(type)
         Identifier: \(head + tail)
-
+        
         """
     }
-}
-
-struct Release: Decodable {
-    let au: String?
-    let jp: String?
-    let eu: String?
-    let na: String?
+    var consoles: [Int] {
+        [gamesSwitch.isEmpty ? 0 :1 , gamesWiiU.isEmpty ? 0: 1, gamesWiiU.isEmpty ? 0: 1]
+    }
 }
 
 struct Console: Decodable {
     let gameName: String
-    let amiiboUsage: [Usage]
 }
 
-struct Usage: Decodable {
-    let usage: String
-    
-    enum CodingKeys: String, CodingKey {
-        case usage = "Usage"
-    }
-}
+
