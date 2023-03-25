@@ -7,16 +7,18 @@
 
 import UIKit
 
-class DescriptionViewController: UIViewController {
+final class DescriptionViewController: UIViewController {
     
+    // MARK: - IBOutlets
     @IBOutlet var amiiboImage: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
+    // MARK: - Properties
     var amiiboDescription: Description!
-    
     private let networkManager = NetworkManager.shared
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = amiiboDescription.character
@@ -26,6 +28,11 @@ class DescriptionViewController: UIViewController {
         fetchImage()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationVC = segue.destination as? UINavigationController
+        guard let usageVC = navigationVC?.topViewController as? UsageTableViewController else { return }
+        usageVC.amiiboDescription = amiiboDescription
+    }
 
     // MARK: - Private Functions
     private func fetchImage() {
