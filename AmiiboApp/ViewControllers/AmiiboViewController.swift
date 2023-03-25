@@ -8,17 +8,26 @@
 import UIKit
 
 final class AmiiboViewController: UICollectionViewController {
+    // MARK: - Properties
     private var amiibos: [Description] = []
     private let networkManager = NetworkManager.shared
 
-    //MARK: - Override Functions
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Amiibo Library"
         fetchAmiibo()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let item = sender as? Description else { return }
+        if segue.identifier == "showDescription" {
+            guard let descriptionVC = segue.destination as? DescriptionViewController else { return }
+            descriptionVC.amiiboDescription = item
+        }
+    }
     
+    // MARK: - Private Functions
     private func fetchAmiibo() {
         networkManager.fetch(Amiibo.self, from: Link.amiibosURL.url) { [weak self] result in
             switch result {
@@ -46,7 +55,11 @@ extension AmiiboViewController {
         cell.configure(with: amiibo)
         return cell
     }
-
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedAmiibo = amiibos[indexPath.item]
+        self.performSegue(withIdentifier: "showDescription", sender: selectedAmiibo)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
