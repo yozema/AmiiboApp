@@ -25,8 +25,15 @@ struct Description: Decodable {
     let head: String
     let tail: String
     
-    var identifier: String{
-        "\(head)\(tail)"
+    var description: String{
+        """
+        Name: \(name)
+        Game Series: \(gameSeries)
+        Amiibo Series: \(amiiboSeries)
+        Type: \(type)
+        Identifier: \(head + tail)
+
+        """
     }
 }
 
