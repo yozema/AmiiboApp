@@ -8,22 +8,35 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
+    
+    @IBOutlet var amiiboImage: UIImageView!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
+    var amiiboDescription: Description!
+    
+    private let networkManager = NetworkManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        title = amiiboDescription.character
+        descriptionLabel.text = amiiboDescription.description
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        fetchImage()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Functions
+    private func fetchImage() {
+        networkManager.fetchImage(from: amiiboDescription.image) { [weak self] result in
+            switch result {
+            case .success(let imageData):
+                self?.amiiboImage.image = UIImage(data: imageData)
+                self?.activityIndicator.stopAnimating()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
-    */
-
 }
