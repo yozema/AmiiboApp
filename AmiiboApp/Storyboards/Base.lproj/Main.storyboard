@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KcO-Of-e4f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLJ-Gv-cPe">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -320,59 +320,6 @@
             </objects>
             <point key="canvasLocation" x="2102" y="-18"/>
         </scene>
-        <!--Start View Controller-->
-        <scene sceneID="bPO-zy-SFF">
-            <objects>
-                <viewController id="KcO-Of-e4f" customClass="StartViewController" customModule="AmiiboApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="esQ-PK-VVV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fns-x4-Nnp" customClass="SpringButton" customModule="SpringAnimation">
-                                <rect key="frame" x="36" y="256" width="248" height="56"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="Amiibo.svg"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeIn"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="startButtonTapped" destination="KcO-Of-e4f" eventType="touchUpInside" id="hPP-ME-x7X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-yK-JFL" customClass="SpringButton" customModule="SpringAnimation">
-                                <rect key="frame" x="107" y="312" width="107" height="22"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Tap to start">
-                                    <color key="titleColor" systemColor="systemRedColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="startButtonTapped" destination="KcO-Of-e4f" eventType="touchUpInside" id="Rsr-Lm-jXx"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="G2O-W0-rOA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="G2O-W0-rOA" firstAttribute="trailing" secondItem="fns-x4-Nnp" secondAttribute="trailing" constant="36" id="0x5-3K-0B0"/>
-                            <constraint firstItem="fns-x4-Nnp" firstAttribute="leading" secondItem="G2O-W0-rOA" secondAttribute="leading" constant="36" id="2NL-To-d4y"/>
-                            <constraint firstItem="G2O-W0-rOA" firstAttribute="trailing" secondItem="oXj-yK-JFL" secondAttribute="trailing" constant="106" id="9PO-Bn-CHV"/>
-                            <constraint firstItem="oXj-yK-JFL" firstAttribute="leading" secondItem="G2O-W0-rOA" secondAttribute="leading" constant="107" id="EJy-IP-PC9"/>
-                            <constraint firstItem="fns-x4-Nnp" firstAttribute="height" secondItem="esQ-PK-VVV" secondAttribute="height" multiplier="0.0985915" id="LkJ-Ah-1S3"/>
-                            <constraint firstItem="G2O-W0-rOA" firstAttribute="bottom" secondItem="oXj-yK-JFL" secondAttribute="bottom" multiplier="1.7" id="YQh-qh-O86"/>
-                            <constraint firstItem="fns-x4-Nnp" firstAttribute="top" secondItem="G2O-W0-rOA" secondAttribute="top" constant="256" id="gIx-LQ-srt"/>
-                            <constraint firstItem="oXj-yK-JFL" firstAttribute="top" secondItem="fns-x4-Nnp" secondAttribute="bottom" id="rVa-St-Xv2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="logoButton" destination="fns-x4-Nnp" id="fXm-44-VD6"/>
-                        <segue destination="zLJ-Gv-cPe" kind="presentation" identifier="startTap" modalPresentationStyle="fullScreen" id="igj-bE-YA5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mB8-Gc-8XS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-723.75" y="-17.95774647887324"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BuZ-sL-spo">
             <objects>
@@ -405,7 +352,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Amiibo.svg" width="1280" height="292"/>
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="person.2.fill" catalog="system" width="128" height="81"/>
