@@ -11,12 +11,14 @@ final class AmiiboViewController: UICollectionViewController {
     // MARK: - Properties
     private var amiibos: [Description] = []
     private let networkManager = NetworkManager.shared
+    private var spinnerView = UIActivityIndicatorView()
 
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Amiibo Library"
         fetchAmiibo()
+        showSpinner(in: view)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,10 +36,21 @@ final class AmiiboViewController: UICollectionViewController {
             case .success(let amiiboList):
                 self?.amiibos = amiiboList.amiibo
                 self?.collectionView.reloadData()
+                self?.spinnerView.stopAnimating()
             case .failure(let error):
                 print(error)
             }
         }
+    }
+    
+    private func showSpinner(in view: UIView) {
+        spinnerView = UIActivityIndicatorView(style: .large)
+        spinnerView.color = .white
+        spinnerView.startAnimating()
+        spinnerView.center = view.center
+        spinnerView.hidesWhenStopped = true
+        
+        view.addSubview(spinnerView)
     }
 }
 
