@@ -23,6 +23,7 @@ struct Description: Decodable {
     let type: String
     let head: String
     let tail: String
+    let release: Release?
     
     var description: String{
         """
@@ -34,9 +35,21 @@ struct Description: Decodable {
         
         """
     }
+    
     var consoles: [Int] {
-        [gamesSwitch.isEmpty ? 0 :1 , gamesWiiU.isEmpty ? 0: 1, gamesWiiU.isEmpty ? 0: 1]
+        [
+         gamesSwitch.isEmpty ? 0 : 1,
+         gamesWiiU.isEmpty ? 0 : 1,
+         gamesWiiU.isEmpty ? 0 : 1
+        ]
     }
+}
+
+struct Release: Decodable {
+    let au: String?
+    let eu: String?
+    let jp: String?
+    let na: String?
 }
 
 struct Console: Decodable {
