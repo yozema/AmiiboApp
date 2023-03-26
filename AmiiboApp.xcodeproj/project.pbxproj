@@ -14,7 +14,6 @@
 		9C416BF129C95062004ACE29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C416BEF29C95062004ACE29 /* LaunchScreen.storyboard */; };
 		9C416C0029C950EC004ACE29 /* Amiibo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416BFF29C950EC004ACE29 /* Amiibo.swift */; };
 		9C416C0329CA8BD7004ACE29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C416C0229CA8BD7004ACE29 /* NetworkManager.swift */; };
-		9CA9E66829CFAACE00A2BBC6 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 9CA9E66729CFAACE00A2BBC6 /* SpringAnimation */; };
 		9CBAB30029CE29FB00F7AF33 /* AmiiboViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAB2FF29CE29FB00F7AF33 /* AmiiboViewController.swift */; };
 		9CBAB30229CE2A2600F7AF33 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAB30129CE2A2600F7AF33 /* DescriptionViewController.swift */; };
 		9CBAB30429CE2A4200F7AF33 /* UsageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBAB30329CE2A4200F7AF33 /* UsageTableViewController.swift */; };
@@ -42,7 +41,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA9E66829CFAACE00A2BBC6 /* SpringAnimation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +155,6 @@
 			);
 			name = AmiiboApp;
 			packageProductDependencies = (
-				9CA9E66729CFAACE00A2BBC6 /* SpringAnimation */,
 			);
 			productName = AmiiboApp;
 			productReference = 9C416BE129C95060004ACE29 /* AmiiboApp.app */;
@@ -188,7 +185,6 @@
 			);
 			mainGroup = 9C416BD829C95060004ACE29;
 			packageReferences = (
-				9CA9E66629CFAACE00A2BBC6 /* XCRemoteSwiftPackageReference "SpringAnimation" */,
 			);
 			productRefGroup = 9C416BE229C95060004ACE29 /* Products */;
 			projectDirPath = "";
@@ -452,25 +448,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		9CA9E66629CFAACE00A2BBC6 /* XCRemoteSwiftPackageReference "SpringAnimation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/LexDeBash/SpringAnimation";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		9CA9E66729CFAACE00A2BBC6 /* SpringAnimation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9CA9E66629CFAACE00A2BBC6 /* XCRemoteSwiftPackageReference "SpringAnimation" */;
-			productName = SpringAnimation;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C416BD929C95060004ACE29 /* Project object */;
 }
