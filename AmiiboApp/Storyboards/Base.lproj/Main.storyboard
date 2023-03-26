@@ -242,7 +242,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Jhx-33-k2B">
-                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Czt-9Q-eB7">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark.circle" catalog="system" id="Czt-9Q-eB7">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="cancelButtonTapped" destination="jQH-ib-Ebl" id="HhR-yP-okX"/>
@@ -369,6 +369,7 @@
         <image name="gamecontroller" catalog="system" width="128" height="79"/>
         <image name="gamecontroller.fill" catalog="system" width="128" height="79"/>
         <image name="person.2.fill" catalog="system" width="128" height="81"/>
+        <image name="xmark.circle" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
