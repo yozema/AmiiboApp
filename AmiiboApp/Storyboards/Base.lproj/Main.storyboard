@@ -241,7 +241,14 @@
                             <outlet property="delegate" destination="jQH-ib-Ebl" id="O8q-Kh-GW0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Jhx-33-k2B"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Jhx-33-k2B">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="Czt-9Q-eB7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="jQH-ib-Ebl" id="HhR-yP-okX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88q-Q7-T4S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -258,6 +265,9 @@
                         <color key="tintColor" systemColor="systemRedColor"/>
                         <color key="barTintColor" systemColor="systemRedColor"/>
                         <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
@@ -330,7 +340,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="3bs-zl-GFi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gT1-pN-JPO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

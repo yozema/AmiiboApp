@@ -33,6 +33,12 @@ final class UsageTableViewController: UITableViewController {
         prepareGameList()
         consolesCounting()
     }
+    
+    // MARK: - IBActions
+    
+    @IBAction func cancelButtonTapped() {
+        dismiss(animated: true)
+    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,8 +63,6 @@ final class UsageTableViewController: UITableViewController {
         switch section {
         case 0:
             sectionRows = switchGames.count
-            print(sectionRows)
-            print(switchGames)
         case 1:
             sectionRows = wiiuGames.count
         default:
