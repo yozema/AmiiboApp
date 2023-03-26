@@ -329,10 +329,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="CIg-8G-6tn">
-                                <rect key="frame" x="40" y="221" width="240" height="147"/>
+                                <rect key="frame" x="40" y="221" width="240" height="117"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fns-x4-Nnp" customClass="SpringButton" customModule="SpringAnimation">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="45"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="Amiibo.svg"/>
                                         <userDefinedRuntimeAttributes>
@@ -343,7 +343,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXj-yK-JFL" customClass="SpringButton" customModule="SpringAnimation">
-                                        <rect key="frame" x="66.5" y="87" width="107" height="60"/>
+                                        <rect key="frame" x="66.5" y="72" width="107" height="45"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Tap to start">
@@ -362,7 +362,7 @@
                             <constraint firstItem="CIg-8G-6tn" firstAttribute="top" secondItem="G2O-W0-rOA" secondAttribute="top" constant="221" id="HcG-Ne-Din"/>
                             <constraint firstItem="G2O-W0-rOA" firstAttribute="trailing" secondItem="CIg-8G-6tn" secondAttribute="trailing" constant="40" id="nZl-3b-SdF"/>
                             <constraint firstItem="CIg-8G-6tn" firstAttribute="leading" secondItem="G2O-W0-rOA" secondAttribute="leading" constant="40" id="pnZ-MA-XyX"/>
-                            <constraint firstAttribute="bottom" secondItem="CIg-8G-6tn" secondAttribute="bottom" constant="200" id="rEN-lU-b5G"/>
+                            <constraint firstAttribute="bottom" secondItem="CIg-8G-6tn" secondAttribute="bottom" constant="230" id="rEN-lU-b5G"/>
                         </constraints>
                     </view>
                     <connections>
