@@ -79,20 +79,15 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="fat-bi-vtE">
-                                            <rect key="frame" x="43" y="60" width="20" height="20"/>
-                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="sBB-nU-PRL" secondAttribute="bottom" constant="5" id="075-zp-VYV"/>
                                         <constraint firstItem="s7j-eT-211" firstAttribute="leading" secondItem="sBB-nU-PRL" secondAttribute="trailing" constant="3" id="A6P-5Y-Fq0"/>
-                                        <constraint firstItem="fat-bi-vtE" firstAttribute="centerY" secondItem="sBB-nU-PRL" secondAttribute="centerY" id="Fvr-mh-LNo"/>
                                         <constraint firstAttribute="trailing" secondItem="s7j-eT-211" secondAttribute="trailing" constant="3" id="GVH-Vf-MD7"/>
                                         <constraint firstItem="s7j-eT-211" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" constant="5" id="HWY-ld-Z1h"/>
                                         <constraint firstAttribute="bottom" secondItem="s7j-eT-211" secondAttribute="bottom" constant="10" id="PnY-eS-9po"/>
                                         <constraint firstItem="sBB-nU-PRL" firstAttribute="top" secondItem="nwU-G1-4ex" secondAttribute="top" constant="5" id="QBi-FM-HaG"/>
                                         <constraint firstItem="sBB-nU-PRL" firstAttribute="leading" secondItem="nwU-G1-4ex" secondAttribute="leading" constant="3" id="YAy-Ob-Ll7"/>
-                                        <constraint firstItem="fat-bi-vtE" firstAttribute="centerX" secondItem="sBB-nU-PRL" secondAttribute="centerX" id="niC-Fy-rR3"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +97,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="activityIndicator" destination="fat-bi-vtE" id="Rrd-uW-yhU"/>
                                     <outlet property="amiiboImage" destination="sBB-nU-PRL" id="j3A-YS-xOo"/>
                                     <outlet property="gameLabel" destination="JWx-V2-8kd" id="ylE-LE-M55"/>
                                     <outlet property="nameLabel" destination="j4o-Hz-q8n" id="vl5-av-xth"/>
