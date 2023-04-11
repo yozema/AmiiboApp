@@ -41,6 +41,14 @@ final class AmiiboViewController: UICollectionViewController {
         }
     }
     
+    @IBAction func clearCache(_ sender: UIBarButtonItem) {
+        let cache = ImageCache.default
+        cache.clearMemoryCache()
+        cache.clearDiskCache() {
+            print("Done")
+        }
+    }
+    
     // MARK: - Private Functions
     private func fetchAmiibo() {
         networkManager.fetch(Amiibo.self, from: Link.amiibosURL.url) { [weak self] result in
