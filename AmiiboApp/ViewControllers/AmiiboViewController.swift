@@ -8,10 +8,21 @@
 import UIKit
 
 final class AmiiboViewController: UICollectionViewController {
+    
     // MARK: - Properties
     private var amiibos: [Description] = []
     private let networkManager = NetworkManager.shared
     private var spinnerView = UIActivityIndicatorView()
+    private let searchController = UISearchController(searchResultsController: nil)
+    private var filteredCharacter: [Description] = []
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    private var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
+    
 
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -19,6 +30,7 @@ final class AmiiboViewController: UICollectionViewController {
         title = "Amiibo Library"
         fetchAmiibo()
         showSpinner(in: view)
+        setupSearchController()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -52,25 +64,45 @@ final class AmiiboViewController: UICollectionViewController {
         
         view.addSubview(spinnerView)
     }
+    
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.barTintColor = .white
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textField.font = UIFont.boldSystemFont(ofSize: 17)
+            textField.textColor = .white
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 extension AmiiboViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        amiibos.count
+        isFiltering ? filteredCharacter.count : amiibos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "amiiboCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "amiiboCell",
+            for: indexPath)
         guard let cell = cell as? AmiiboCell else { return UICollectionViewCell() }
-        let amiibo = amiibos[indexPath.item]
+        let amiibo = isFiltering
+        ? filteredCharacter[indexPath.item]
+        : amiibos[indexPath.item]
         cell.configure(with: amiibo)
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectedAmiibo = amiibos[indexPath.item]
+        let selectedAmiibo = isFiltering
+        ? filteredCharacter[indexPath.item]
+        : amiibos[indexPath.item]
         self.performSegue(withIdentifier: "showDescription", sender: selectedAmiibo)
     }
 }
@@ -79,5 +111,20 @@ extension AmiiboViewController {
 extension AmiiboViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 30, height: 100)
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension AmiiboViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchController.searchBar.text ?? "")
+    }
+    
+    private func filterContentForSearchText(_ searchText: String) {
+        filteredCharacter = amiibos.filter { character in
+            character.name.lowercased().contains(searchText.lowercased())
+        }
+        
+        collectionView.reloadData()
     }
 }

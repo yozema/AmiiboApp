@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C416BE129C95060004ACE29 /* AmiiboApp_manual_JSONparsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboApp_manual_JSONparsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C416BE129C95060004ACE29 /* AmiiboApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmiiboApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C416BE429C95060004ACE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C416BE629C95060004ACE29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C416BEB29C95060004ACE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		9C416BE229C95060004ACE29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C416BE129C95060004ACE29 /* AmiiboApp_manual_JSONparsing.app */,
+				9C416BE129C95060004ACE29 /* AmiiboApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C416BE029C95060004ACE29 /* AmiiboApp_manual_JSONparsing */ = {
+		9C416BE029C95060004ACE29 /* AmiiboApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C416BF529C95062004ACE29 /* Build configuration list for PBXNativeTarget "AmiiboApp_manual_JSONparsing" */;
+			buildConfigurationList = 9C416BF529C95062004ACE29 /* Build configuration list for PBXNativeTarget "AmiiboApp" */;
 			buildPhases = (
 				9C416BDD29C95060004ACE29 /* Sources */,
 				9C416BDE29C95060004ACE29 /* Frameworks */,
@@ -153,11 +153,11 @@
 			);
 			dependencies = (
 			);
-			name = AmiiboApp_manual_JSONparsing;
+			name = AmiiboApp;
 			packageProductDependencies = (
 			);
 			productName = AmiiboApp;
-			productReference = 9C416BE129C95060004ACE29 /* AmiiboApp_manual_JSONparsing.app */;
+			productReference = 9C416BE129C95060004ACE29 /* AmiiboApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -175,7 +175,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C416BDC29C95060004ACE29 /* Build configuration list for PBXProject "AmiiboApp_manual_JSONparsing" */;
+			buildConfigurationList = 9C416BDC29C95060004ACE29 /* Build configuration list for PBXProject "AmiiboApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,7 +190,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C416BE029C95060004ACE29 /* AmiiboApp_manual_JSONparsing */,
+				9C416BE029C95060004ACE29 /* AmiiboApp */,
 			);
 		};
 /* End PBXProject section */
@@ -429,7 +429,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C416BDC29C95060004ACE29 /* Build configuration list for PBXProject "AmiiboApp_manual_JSONparsing" */ = {
+		9C416BDC29C95060004ACE29 /* Build configuration list for PBXProject "AmiiboApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C416BF329C95062004ACE29 /* Debug */,
@@ -438,7 +438,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C416BF529C95062004ACE29 /* Build configuration list for PBXNativeTarget "AmiiboApp_manual_JSONparsing" */ = {
+		9C416BF529C95062004ACE29 /* Build configuration list for PBXNativeTarget "AmiiboApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C416BF629C95062004ACE29 /* Debug */,
