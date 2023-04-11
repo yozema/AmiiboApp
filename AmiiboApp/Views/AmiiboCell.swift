@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class AmiiboCell: UICollectionViewCell {
     // MARK: - IBOutlets
@@ -16,7 +17,7 @@ final class AmiiboCell: UICollectionViewCell {
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
-    private let networkManager = NetworkManager.shared
+//    private let networkManager = NetworkManager.shared
     
     // MARK: - Cell Configuration
     func configure(with amiibo: Description) {
@@ -26,14 +27,33 @@ final class AmiiboCell: UICollectionViewCell {
         gameLabel.text = amiibo.gameSeries
         seriesLabel.text = amiibo.amiiboSeries
         
-        networkManager.fetchImage(from: amiibo.image) { [weak self] result in
+        amiiboImage.kf.indicatorType = .activity
+        let processor = DownsamplingImageProcessor(size: amiiboImage.bounds.size)
+        amiiboImage.kf.setImage(
+            with: amiibo.image,
+            options: [
+                .processor(processor),
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(1)),
+                .cacheOriginalImage
+            ]
+        ) { [weak self] result in
             switch result {
-            case .success(let imageData):
-                self?.amiiboImage.image = UIImage(data: imageData)
+            case .success(_):
                 self?.activityIndicator.stopAnimating()
             case .failure(let error):
-                print(error)
+                print("Job failed: \(error.localizedDescription)")
             }
         }
+        
+//        networkManager.fetchImage(from: amiibo.image) { [weak self] result in
+//            switch result {
+//            case .success(let imageData):
+//                self?.amiiboImage.image = UIImage(data: imageData)
+//                self?.activityIndicator.stopAnimating()
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
 }

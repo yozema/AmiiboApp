@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class AmiiboViewController: UICollectionViewController {
     
@@ -23,7 +24,6 @@ final class AmiiboViewController: UICollectionViewController {
         return searchController.isActive && !searchBarIsEmpty
     }
     
-
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
