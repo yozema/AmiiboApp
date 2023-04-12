@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 enum Link {
     case amiibosURL
@@ -58,6 +59,14 @@ final class NetworkManager {
             DispatchQueue.main.async {
                 completion(.success(imageData))
             }
+        }
+    }
+    
+    func clearCache() {
+        let cache = ImageCache.default
+        cache.clearMemoryCache()
+        cache.clearDiskCache() {
+            print("Done")
         }
     }
 }
