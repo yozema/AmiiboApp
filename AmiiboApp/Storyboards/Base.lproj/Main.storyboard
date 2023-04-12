@@ -109,13 +109,7 @@
                             <outlet property="delegate" destination="VC1-5Q-8If" id="A8W-AQ-gt4"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="IMf-L3-7SX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="pYg-Ru-t4a">
-                            <connections>
-                                <action selector="clearCache:" destination="VC1-5Q-8If" id="0SY-Gb-VQ3"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="IMf-L3-7SX"/>
                     <connections>
                         <segue destination="lK5-kZ-jZ4" kind="show" identifier="showDescription" id="zfb-bL-8pI"/>
                     </connections>
