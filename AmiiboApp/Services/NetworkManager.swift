@@ -66,7 +66,7 @@ final class NetworkManager {
         let cache = ImageCache.default
         cache.clearMemoryCache()
         cache.clearDiskCache() {
-            print("Done")
+            print("Cache removed")
         }
     }
 }
