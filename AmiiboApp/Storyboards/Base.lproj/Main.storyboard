@@ -109,7 +109,9 @@
                             <outlet property="delegate" destination="VC1-5Q-8If" id="A8W-AQ-gt4"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="IMf-L3-7SX"/>
+                    <navigationItem key="navigationItem" id="IMf-L3-7SX">
+                        <nil key="title"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="lK5-kZ-jZ4" kind="show" identifier="showDescription" id="zfb-bL-8pI"/>
                     </connections>
@@ -319,7 +321,9 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zLJ-Gv-cPe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="3bs-zl-GFi"/>
+                    <navigationItem key="navigationItem" id="3bs-zl-GFi">
+                        <nil key="title"/>
+                    </navigationItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gT1-pN-JPO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -342,7 +346,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lU9-eM-lyS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22.5" y="-16.901408450704224"/>
+            <point key="canvasLocation" x="-56" y="-19"/>
         </scene>
     </scenes>
     <resources>

@@ -12,10 +12,12 @@ final class AmiiboViewController: UICollectionViewController {
     
     // MARK: - Properties
     private var amiibos: [Description] = []
+    private var filteredCharacter: [Description] = []
+   
     private let networkManager = NetworkManager.shared
     private var spinnerView = UIActivityIndicatorView()
+    
     private let searchController = UISearchController(searchResultsController: nil)
-    private var filteredCharacter: [Description] = []
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
